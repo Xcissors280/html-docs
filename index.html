@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Docs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Lexend', sans-serif;
+            padding: 40px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 65%;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        code {
+            background-color: #202128;
+            color: #00ff88;
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-family: 'Consolas', monospace;
+            font-size: 1.2rem;
+        }
+        
+        pre {
+            background-color: #202128;
+            color: #00ff88;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 5px;
+            border-radius: 6px;
+            overflow-x: scroll;
+            margin: 10px 0;
+            font-family: 'Consolas', monospace;
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        post {
+            background-color: #202128;
+            color: #00ff88;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 5px;
+            border-radius: 6px;
+            overflow-x: scroll;
+            margin: 10px 0;
+            font-family: 'Consolas', monospace;
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ATS Docs | Native HTML | Beta 3</h1>
+            
+<p>This SSD and flash drive ranking website is really good https://ssd-tester.com/</p>
+
+<h2>How to disable windows boot lockscreen (requires enterprise)</h2>
+<p>First go to turn windows features on or off, then enable custom logon and unbranded boot under device lockdown, then save<br>
+Second configure sysinternals autologon ​​https://live.sysinternals.com/Autologon64.exe<br>
+Third run this in admin powershell `Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows Embedded\EmbeddedLogon" -Name "HideAutoLogonUI" -Value 1 -Type DWord; Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization" -Name "NoLockScreen" -Value 1 -Type DWord; Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI" -Name "AnimationDisabled" -Value 1 -Type DWord`<br>
+Fourth use hackbgrt with a black .bmp if the windows logo or loading animation are still there</p>
+
+Microsoft windows store app installer download link <code>https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=en-us&gl=US&ocid=pdpshare</code>
+
+Microsoft windows store reset/install can be run though search under wsreset.exe or in powershell with wsreset -i
+
+Xbox app on windows gaming services repair tool downloadable version https://aka.ms/GamingRepairTool
+
+Some HP laptops dont have advanced bios settings because fuck you.
+
+Dell desktop bios displays a headless message if post warning config is set to anything other than the lowest notify on warnings and errors option
+
+Cloudflare 1.1.1.1 warp also has a decent free vpn
+
+If raw photos aren't previewing in windows explorer and other file pickers you need to install “RAW Image Extensions” from the microsoft store
+
+Vmware downloads are annoying as fuck now, heres the fusion for macos link https://customerconnect.vmware.com/evalcenter?p=fusion-player-personal-13
+
+Parallels desktop crack download that actually works, also you need a very fast ssd https://d4184.download-send.com/d/rzyrxoyd6cosj4l4sfsq5gvz2nyouteweyn7hov4shqadnhcwxw24a25w5l5bhk2cf6wgbb4/ParallelsDesktop-20.2.0-55872.zip 
+
+Geforce experience and the nvidia app download drivers and do recording, nvidia control panel manages settings, eventually everything will be moved to the new nvidia app
+
+Microsoft Windows Store apps are located in the windowsapps folder and have 8wekyb3d8bbwe before the folder name
+
+If cloudflare pages build/deploy gets stuck on deploying to global network the first time just try again and it should work
+
+The iCloud website usually requires 2FA however you can click the find my button and do some basic stuff like playing a sound without it which is insanely useful
+
+Google search operator stuff https://www.youtube.com/watch?v=M3bduu2GGVU 
+
+Google AI Studio lets you use the Gemini AI API for free and its not terrible
+
+Embedded displayport connectors (laptop screen) are pretty universal and you can usually kinda just mix and match them, scaling in bios can be a little broken though if its a different resolution.
+
+Youtube music doesnt have an API and there's no way to search songs in it without an account token (or scraping)
+
+Lenovo has a pretty good wiki with a bunch of tech stuff and a few ads https://www.lenovo.com/us/en/glossary/
+
+If you dont see any other drives in the windows installer menu disable rst/raid or install the drivers according to this guide https://rtech.support/guides/intel-rst/ 
+
+You can do a windows in place upgrade/install from update settings or the iso you download, like a reinstall not a reset but you keep all your data and it fixes stuff
+
+When resizing the main macOS partition just do it in recovery, in normal macOS it’s a huge pain
+
+<pre>If your having issues with long load or search times on windows 11 taskbar search bar run these in admin powershell
+```Get-AppxPackage -AllUsers *MicrosoftWindows.Client.WebExperience* | Reset-AppxPackage```
+```Get-AppxPackage *MicrosoftWindows.Client.WebExperience* | Reset-AppxPackage```
+```Get-AppxPackage *MicrosoftWindows.Client.CBS* | Reset-AppxPackage```</pre>
+
+If your having issues running a Terraria server or other game servers on Windows you might need to install the Microsoft XNA Framework https://www.microsoft.com/en-us/download/details.aspx?id=27598
+
+If your favicon isnt working on chrome make sure you have <link rel="icon" href="/favicon.ico"> or whatever the link is in your HTML 
+
+To port forward or static ip or bridged network on a Hyper-V VM open the network switch manager in the right panel and add a new switch with physical/shared/bridged, then go to the vm settings in the right panel and remove the current switch, add a new device, and select the switch you just created, then it should show up as a normal device on your router.
+
+In Hyper-V VM if you get the ISO/DVD/Disc drive press any key error gen 2 windows uefi, all you have to do is hold space or any key while the VM is starting because there's no wait time, or just use the parsec gpupv scipt
+
+If Windows 11 Home says its not supported on Hyper-V just go to VM settings, security, then check the enable TPM box
+
+(DOUBLE CHECK THIS ON REDDIT FIRST) Verizon/Fios only offers fiber and some old dsl, no cable broadband. If you have a verizon router with coax its probably for TV service or MoCA from the ONT.
+
+IOS Siri Shortcuts is pretty decent for programming and automation stuff if you need direct access to the hardware, settings, or things like imessage
+
+You can bypass MDM restrictions on an organization T2 or M Series Mac by restoring it with DFU, then creating a new account and blocking apple mdm servers https://v3.atserver.us 
+
+If you have icloud+ or most other mail servers and use your own domain you can enable catchall addresses which lets you have stuff like google @ mysite.com or any other service, kina like gmail + tags but this works everywhere (some security concerns though)
+
+<post>New PSU and actually good psu tier list https://docs.google.com/spreadsheets/d/1akCHL7Vhzk_EhrpIGkz8zTEvYfLDcaSpZRB6Xt6JWkc/edit?gid=931697732#gid=931697732</post>
+
+Windows bloat is annoying but iot enterprise ltsc non subscription version doesnt have any of it, you can download the iso here https://massgrave.dev/windows_ltsc_links and activate it with massgrave, then get wsreset and appinstaller
+
+If you dont want to pay for windows massgrave hwid is basically the only safe way to do it, just run this in powershell and chose windows hwid irm https://get.activated.win | iex
+
+If you want to have software or files in one place and sync them elsewhere you can do it directly or through a nas or cloud storage, i have emulators on my pc that then get synced to my laptop and arcade, this can also work both ways to update save games but be careful with conflicts and errors
+
+If downloads are slow try parallel and or multithreaded download, on chrome its `chrome://flags and allow-parallel-downloading` and on firefox its a little different but about:config and `network.http.max-persistent-connections-per-server`
+You might also need an extension like [this](https://addons.mozilla.org/en-US/firefox/addon/multithreaded-download-manager/?src=api) plus you can disable the prompt ui
+
+Most managed google drive accounts dont have a storage limit but the entire organization like a school usually has 100TB total, if you go over this everything will break and they will find who you are
+
+Managed cloud storage accounts like google drive dont let you sign into 3rd party apps like a nas backup app however they do let you use their own desktop apps like google drive desktop or onedrive, those are usually more reliable than the web versions and support advanced and continuous syncing.
+
+You can cloud storage with apps like google drive desktop and mount it to a drive letter which lets you install games and other stuff in the cloud, its pretty bad and usually just uses the cache or takes forever to load, local network/NAS is usually way better but still pretty slow.
+
+Ublock origin (basically the only working adblocker) has a terrible lite version on chrome, to use the real thing get firefox (you can use custom themes but syncing is a little annoying) also yes pie exists but theres a bunch of reasons why you shouldn't use it
+
+You cant stream in high quality or download stuff from steaming services because fuck you and anti piracy, sometimes it works on edge or the official app though
+
+Nvidia RTX video super resolution actually works pretty well especially if your watching like 720p movies on a 4k screen (needs an rtx card) also theres one for HDR which is even better
+
+Keeping your battery between 20-80% is best for its long term health, most devices let you or have 3rd party apps that limit you to 80% max charge
+
+Thermal grizzly kryonaut liquid metal thermal paste is not designed for air coolers or really anything with high temperatures
+
+PTM7950 and other phase change thermal paste/pads are good for direct die contact like a laptop or GPU but they don't really help much on a desktop cpu
+
+Windows still supports theme packs but now its just awesome sounds and usually low res wallpapers, i like the halo reach art one, you can download all of them here https://support.microsoft.com/en-us/windows/windows-themes-94880287-6046-1d35-6d2f-35dee759701e. 
+
+
+
+Sometimes the windows taskbar goes dark when you click on an app and transparency usually fixes it but sometimes you need to disable the nvidia in game overlay.
+
+Driver finders and installation apps usually dont work and cause a bunch of problems, just download the official drivers from your manufacturer or if those aren't good you can find the original manufacturer like an MSI wifi card vs Qualcomm who makes the chipset, here's a list https://rtech.support/learning/computing-101/#support-sites.
+
+You can download wikipedia text in the .bz2 format from the link below and use an applike the old google bzreader to decompress, index, and search through it https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2. 
+
+Holding control during startup temporarily disables msi afterburner
+
+You can exclude file types like .iso and .bat from defender warnings by going to group policy editor, user configuration, administrative templates, windows configuration, attachment manager. Then open and enable low risk file types and add them in the bottom left (you need pro and this can open security vulnerabilities)
+
+To install the Homebrew package manager on MacOS download the .pkg installer from their GitHub. Then add it to PATH with the command for your processor, which can be found in about this mac Apple Silicon M: eval "$(/opt/homebrew/bin/brew shellenv)" Intel Core I: eval "$(/usr/local/bin/brew shellenv)"
+
+To install the Baobab/Gnome Disk Usage Analyzer on Linux download it from flathub To install it on MacOS install the Formule with Homebrew by running brew install baobab in terminal then start it with brew baobab
+type ?homebrew for our guide on how to instal homebrew on MacOS
+
+Teknoparrot downloads https://qiwi.gg/folder/6571f8953558c64bd5703bc7 
+
+Cracked software for macos https://haxmac.cc run ​​`sudo spctl --master-disable` if it says cannot install or app broken
+
+To show actual windows path in explorer instead of search results follow this guide https://www.sevenforums.com/general-discussion/123649-open-new-window-full-path-instead-search-results-path.html 
+
+If windows max brightness is super low all the sudden on an asus laptop check the flicker free dimming setting in ghelper/armory crate (seems like a new bug)
+
+If a printer shows up twice and one doesn't work in the print menu but not in settings check printmanagement.msc
+
+ERP in bios will fully discharge stuff and can fix some mobo/power issues
+
+Microsoft flight simulator on the Xbox app stores some files in the “official” folder which can take up space
+
+Windows hardware accelerated gpu scheduling HAGS often causes issues with games and stuff, if it does turn it off ig
+
+
+Windows games on a mac
+
+Whiskey: Great, Wine, Both, Free
+
+Crossover: Great, Wine, Both, Paid
+
+Heroic: Good, Wine, Both, Free, maybe no steam?
+
+Kegworks: Good, Wine, Intel, Free
+
+Wineskin: Old, Wine, Intel, Free
+
+PortingKit, Old, Wine, Intel, Free
+
+PlayOnMac: Old, Wine, Intel, Free
+
+BootCamp: Perfect, Native, Intel, Free
+
+Parallels: Good, VM, Both, Paid
+
+Fusion: Ok, VM, Both, Free
+
+UTM: Bad, VM, Both, Free
+
+Normal
+
+*star*
+
+**double star**
+
+`tick`
+
+``double tick``
+
+```triple tick```
+
+#hash
+# hashspace
+
+#hashends#
+
+##double hash
+
+##double-hash-dash
+
+###triple
+
+-#dashtag
+
+[link](https://google.com)
+
+(rev)[https://google.com]
+
+Normal bold
+
+Normal italics
+
+-dash
+
+–doubledash
+
+*star
+
+
+Bullet
+Subbullet
+Numberedsub
+second
+Docs title
+
+Docs subtitle
+Docs header
+
+http://localhost:50200/cdn/avatars/1152314375550546001/8bd791f141f2151e63fd648b21b56788.webp?size=160
+
+https://cdn.discordapp.com/avatars/1152314375550546001/8bd791f141f2151e63fd648b21b56788.webp?size=160 
+    </div>
+</body>
+</html>
